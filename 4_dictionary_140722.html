@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+<form action="" style="width: 450px;">
+  <fieldset>
+    <legend>English_Việt Nam Dictionary</legend>
+    <label for="">Nhập từ</label>
+    <input type="text" name="" id="engtext" placeholder="Please enter english word here: " style="width: 250px;">
+    <button type="button" value="Dich" style="width:60px; height: 20px;" onclick="eng_vn();">Dịch</button><br><br>
+    <label for="">Nghĩa Việt Nam của từ nhập vào là: </label>
+
+    <p id="result">Kết quả</p>
+  </fieldset>
+</form>
+
+
+</body>
+
+</html>
+
+
+<script>
+    function eng_vn() {
+  let eng_input = document.getElementById("engtext").value;
+  let vnword = '';
+  let display = '';
+  let arr =[
+      ['banana','apple','good','go','goodnight','hello'],
+      ['Quả Chuối','Quả táo','Làm tốt','Đi thôi','Ngủ nhé','Xin chào'],
+
+  ];
+
+      for (let i = 0; i < arr.length; i++) {
+        for (let j=0; j<= arr[0].length; j++) {
+          if (eng_input == arr[0][j]) {
+                vnword = arr[1][j];
+          } 
+        } 
+      }
+    
+    if (vnword) {
+      display = vnword;
+    } else {
+      display = " không có trong từ điển ";
+    }
+
+    document.getElementById("result").innerHTML = display;
+
+    }
+
+</script>

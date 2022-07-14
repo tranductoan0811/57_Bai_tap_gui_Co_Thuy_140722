@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+  <!-- JavaScript Array join()
+  Syntax: array.join(separator)
+  Definition and Usage
+    The join() method returns an array as a string.
+
+    The join() method does not change the original array.
+
+    Any separator can be specified. The default is comma (,). -->
+
+  <script>
+    var myColor = ["Red", "Green", "White", "Black"];
+    document.write("original array is: " + myColor + "<br>" 
+                  + "*******************************" + "<br>");
+
+    let new_arrs1 = myColor.join();
+    let new_arrs2 = myColor.toString();
+    let new_arrs3 = myColor.join(' + ');
+
+    document.write("new array after join is: " + new_arrs1 + "<br>");
+    document.write("new array after join is: " + new_arrs2 + "<br>");
+    document.write("new array after join is: " + new_arrs3 + "<br>");
+
+  </script>
+
+</body>
+
+
+
+</html>
